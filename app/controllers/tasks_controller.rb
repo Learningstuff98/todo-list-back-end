@@ -5,6 +5,10 @@ class TasksController < ApplicationController
     task = Task.create(task_params)
   end
 
+  def index
+    render json: Task.all
+  end
+
   private
 
   def task_params
